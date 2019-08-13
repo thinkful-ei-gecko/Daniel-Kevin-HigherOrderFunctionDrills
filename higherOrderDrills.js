@@ -54,7 +54,8 @@ function hazardWarningCreator(typeOfWarning) {
     if (warningCounter === 0 || warningCounter >= 2) {
       console.log(`${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`);
     }
-    else {console.log(`${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
+    else {
+      console.log(`${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
     }
   };
 }
@@ -67,3 +68,19 @@ rocksWarning('Durham');
 avalancheWarning('Aspen');
 godzillaWarning('Tokyo');
 rocksWarning('Raleigh');
+
+let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let filtered = turtleMovements.filter(move => move[0] >= 0 && move[1] >= 0);
+for (let i = 0; i < filtered.length; i++){
+  //console.log(filtered[i]);
+}
+
+let mapped = turtleMovements.map(move => {
+  return move[0] + move[1];
+});
+//console.log(mapped);
+
+turtleMovements.forEach(move => {
+  //console.log(`Movement #1: ${Math.abs(move[0])} steps`);
+  //console.log(`Movement #2: ${Math.abs(move[1])} steps`);
+});
