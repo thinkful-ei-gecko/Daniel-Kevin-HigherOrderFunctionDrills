@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 function repeat(fn, n) {
@@ -28,23 +29,21 @@ function filter(arr, fn) {
   return newArray;
 }
 
-// DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
 const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
 // We use your `filter` function here, capturing a new array into `filteredNames`
 // comprised of names that only begin with 'R'
 const filteredNames = filter(myNames, function(name) {
-    // This is known as a "predicate function" - it's a function that 
-    // only returns a boolean
-    return name[0] === 'R';
+  // This is known as a "predicate function" - it's a function that 
+  // only returns a boolean
+  return name[0] === 'R';
 });
 
 console.log(filteredNames); // => ['Rich', 'Ray']
-// <---- DO NOT EDIT BETWEEN THESE LINES
 
 // BONUS CREDIT
-console.log(myNames.filter(name => name[0] === 'R'));
+//console.log(myNames.filter(name => name[0] === 'R'));
 
 function hazardWarningCreator(typeOfWarning) {
   let warningCounter = 0;
@@ -85,7 +84,7 @@ turtleMovements.forEach(move => {
   //console.log(`Movement #2: ${Math.abs(move[1])} steps`);
 });
 
-let arrStr = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+let arrStr = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 
 let codedWords = arrStr.split(' ');
 console.log(codedWords);
