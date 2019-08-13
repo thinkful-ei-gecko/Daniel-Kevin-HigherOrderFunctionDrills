@@ -84,3 +84,19 @@ turtleMovements.forEach(move => {
   //console.log(`Movement #1: ${Math.abs(move[0])} steps`);
   //console.log(`Movement #2: ${Math.abs(move[1])} steps`);
 });
+
+let arrStr = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+
+let codedWords = arrStr.split(' ');
+console.log(codedWords);
+
+let message = codedWords.reduce((acc, item) => {
+  if (item.length === 3) {
+    return acc + ' ';
+  }
+  else {
+    return acc + item[item.length -1].toUpperCase();
+  }  
+}, '');
+
+console.log(message);
