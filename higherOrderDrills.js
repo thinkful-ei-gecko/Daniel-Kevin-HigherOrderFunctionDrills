@@ -45,3 +45,25 @@ console.log(filteredNames); // => ['Rich', 'Ray']
 
 // BONUS CREDIT
 console.log(myNames.filter(name => name[0] === 'R'));
+
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  return function(location) {
+    warningCounter += 1;
+    console.log(`Danger! There is a ${typeOfWarning} hazard at ${location}!`);
+    if (warningCounter === 0 || warningCounter >= 2) {
+      console.log(`${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`);
+    }
+    else {console.log(`${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
+    }
+  };
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the road!');
+const avalancheWarning = hazardWarningCreator('Avalanche on the slopes!');
+const godzillaWarning = hazardWarningCreator('Godzilla is attacking the city!');
+
+rocksWarning('Durham');
+avalancheWarning('Aspen');
+godzillaWarning('Tokyo');
+rocksWarning('Raleigh');
